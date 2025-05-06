@@ -130,15 +130,17 @@
     },
     "projects": [
         {
-            "name": "Chat Bot Frontend",
-            "description": "Interface utilisateur pour un chatbot intelligent avec Vue.js",
+            "name": "InfoBot",
+            "description": "AI-powered digital assistant for administrative procedures in Sidi Kacem, Morocco.",
             "stack": [
-                "Vue.js",
-                "WebSocket",
-                "Tailwind CSS"
+                "React",
+                "TypeScript",
+                "Tailwind CSS",
+                "Supabase",
+                "DeepSeek API"
             ],
             "category": "web",
-            "icon": "Code",
+            "icon": "Bot",
             "link": "#"
         },
         {
@@ -151,20 +153,20 @@
                 "REST API"
             ],
             "category": "web",
-            "icon": "Book",
+            "icon": "LibraryBig",
             "link": "#"
         },
         {
-            "name": "Gestion des actifs média",
-            "description": "Système de gestion de contenu média pour entreprises",
+            "name": "BookBound",
+            "description": "Your premium digital library experience.",
             "stack": [
-                "Laravel",
                 "React",
-                "MySQL",
-                "AWS S3"
+                "TypeScript",
+                "Tailwind CSS",
+                "Supabase"
             ],
             "category": "web",
-            "icon": "Video",
+            "icon": "BookOpen",
             "link": "#"
         },
         {
@@ -178,6 +180,19 @@
             ],
             "category": "web",
             "icon": "Camera",
+            "link": "#"
+        },
+        {
+            "name": "Gestion des actifs média",
+            "description": "Système de gestion de contenu média pour entreprises",
+            "stack": [
+                "Laravel",
+                "React",
+                "MySQL",
+                "AWS S3"
+            ],
+            "category": "web",
+            "icon": "Video",
             "link": "#"
         },
         {
@@ -204,6 +219,30 @@
             ],
             "category": "all",
             "icon": "ShieldCheck",
+            "link": "#"
+        },
+        {
+            "name": "PrintMaster",
+            "description": "Solutions d'impression, de marque et de publicité personnalisées qui transforment vos idées en réalité.",
+            "stack": [
+                "React",
+                "TypeScript",
+                "Tailwind CSS"
+            ],
+            "category": "web",
+            "icon": "Printer",
+            "link": "#"
+        },
+        {
+            "name": "PrintCraft Studio",
+            "description": "Impression de vêtements, création de logos et services de publicité visuelle professionnels. Nous donnons vie à votre marque avec qualité et créativité.",
+            "stack": [
+                "React",
+                "TypeScript",
+                "Tailwind CSS"
+            ],
+            "category": "web",
+            "icon": "Palette",
             "link": "#"
         }
     ],

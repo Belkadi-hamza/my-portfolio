@@ -1,22 +1,30 @@
-import { 
-  Code, 
-  Book, 
-  Video, 
-  Camera, 
-  Brain, 
-  ShieldCheck 
+import {
+  Bot,
+  LibraryBig,
+  BookOpen,
+  Video,
+  Camera,
+  Brain,
+  ShieldCheck,
+  Code,
+  Printer,
+  Palette
 } from 'lucide-react';
 import { useState } from 'react';
 import data from '../data.json';
 import { Project } from '../types';
 
 const iconMap = {
-  Code,
-  Book,
+  Bot,
+  LibraryBig,
+  BookOpen,
   Video,
   Camera,
   Brain,
-  ShieldCheck
+  ShieldCheck,
+  Code,
+  Printer,
+  Palette
 };
 
 export default function Projects() {
