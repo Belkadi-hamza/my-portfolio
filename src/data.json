@@ -64,6 +64,16 @@
                 "Optimisation des performances d'une application média",
                 "Refonte du système de streaming en temps réel"
             ]
+        },
+        {
+            "title": "Ingénieur IA & Machine Learning",
+            "company": "FSBM",
+            "period": "Mars 2025 – Juin 2025",
+            "description": [
+                "Développement d'un système de recommandation de livres basé sur l'analyse du contenu",
+                "Utilisation d'algorithmes de machine learning pour extraire et comparer les caractéristiques des livres",
+                "Optimisation des performances du moteur de suggestion en fonction de la similarité textuelle et thématique"
+            ]
         }
     ],
     "skills": {
