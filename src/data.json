@@ -1,0 +1,231 @@
+{
+    "hero": {
+        "name": "Belkadi Hamza",
+        "title": "Full Stack Developer & AI Enthusiast",
+        "socialLinks": [
+            {
+                "name": "GitHub",
+                "url": "https://github.com/Belkadi-hamza",
+                "icon": "Github"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/belkadi-hamza-81a756292/",
+                "icon": "Linkedin"
+            },
+            {
+                "name": "Email",
+                "url": "mailto:hamzabelkadi25@gmail.com",
+                "icon": "Mail"
+            }
+        ],
+        "image": "https://i.ibb.co/xqfTHp3X/hero.jpg"
+    },
+    "education": [
+        {
+            "degree": "Licence en Intelligence Artificielle",
+            "school": "Faculté des Sciences Ben M'Sik, Casablanca",
+            "period": "2024 – 2025 (en cours)",
+            "description": "Cours clés : Machine Learning, Traitement du Langage Naturel (NLP), Vision par Ordinateur.",
+            "current": true
+        },
+        {
+            "degree": "Diplôme en Multimédia et Design Web",
+            "school": "Brevet de Technicien Supérieur (BTS)",
+            "period": "2022 – 2024",
+            "description": "Spécialisation en développement frontend et design d'interfaces utilisateur.",
+            "current": false
+        }
+    ],
+    "experience": [
+        {
+            "title": "Full Stack Developer",
+            "company": "SNRT",
+            "period": "Mai 2024 – Juin 2024",
+            "description": [
+                "Optimisation des performances d'une application média",
+                "Refonte du système de streaming en temps réel"
+            ]
+        },
+        {
+            "title": "Full Stack Developer",
+            "company": "SNRT",
+            "period": "Mai 2024 – Juin 2024",
+            "description": [
+                "Optimisation des performances d'une application média",
+                "Refonte du système de streaming en temps réel"
+            ]
+        },
+        {
+            "title": "Full Stack Developer",
+            "company": "SNRT",
+            "period": "Mai 2024 – Juin 2024",
+            "description": [
+                "Optimisation des performances d'une application média",
+                "Refonte du système de streaming en temps réel"
+            ]
+        }
+    ],
+    "skills": {
+        "categories": [
+            {
+                "title": "Frontend",
+                "icon": "Code",
+                "skills": [
+                    {
+                        "name": "React",
+                        "level": 90
+                    },
+                    {
+                        "name": "Vue.js",
+                        "level": 85
+                    },
+                    {
+                        "name": "TypeScript",
+                        "level": 88
+                    }
+                ]
+            },
+            {
+                "title": "Backend",
+                "icon": "Database",
+                "skills": [
+                    {
+                        "name": "Laravel",
+                        "level": 85
+                    },
+                    {
+                        "name": "Node.js",
+                        "level": 80
+                    },
+                    {
+                        "name": "Python",
+                        "level": 75
+                    },
+                    {
+                        "name": "Spring Boot",
+                        "level": 50
+                    }
+                ]
+            },
+            {
+                "title": "IA/ML",
+                "icon": "Brain",
+                "skills": [
+                    {
+                        "name": "TensorFlow",
+                        "level": 75
+                    },
+                    {
+                        "name": "NLP",
+                        "level": 70
+                    },
+                    {
+                        "name": "Computer Vision",
+                        "level": 68
+                    }
+                ]
+            }
+        ]
+    },
+    "projects": [
+        {
+            "name": "Chat Bot Frontend",
+            "description": "Interface utilisateur pour un chatbot intelligent avec Vue.js",
+            "stack": [
+                "Vue.js",
+                "WebSocket",
+                "Tailwind CSS"
+            ],
+            "category": "web",
+            "icon": "Code",
+            "link": "#"
+        },
+        {
+            "name": "Bibliothèque en ligne",
+            "description": "Plateforme de gestion de bibliothèque avec Laravel et React",
+            "stack": [
+                "Laravel",
+                "React",
+                "MySQL",
+                "REST API"
+            ],
+            "category": "web",
+            "icon": "Book",
+            "link": "#"
+        },
+        {
+            "name": "Gestion des actifs média",
+            "description": "Système de gestion de contenu média pour entreprises",
+            "stack": [
+                "Laravel",
+                "React",
+                "MySQL",
+                "AWS S3"
+            ],
+            "category": "web",
+            "icon": "Video",
+            "link": "#"
+        },
+        {
+            "name": "Système de gestion de caméras",
+            "description": "Solution de surveillance et gestion de flux vidéo en temps réel",
+            "stack": [
+                "Laravel",
+                "React",
+                "WebRTC",
+                "FFmpeg"
+            ],
+            "category": "web",
+            "icon": "Camera",
+            "link": "#"
+        },
+        {
+            "name": "Système de recommandation de livres",
+            "description": "Algorithme de recommandation basé sur le machine learning",
+            "stack": [
+                "Python",
+                "Pandas",
+                "Scikit-learn",
+                "NLP"
+            ],
+            "category": "ai",
+            "icon": "Brain",
+            "link": "#"
+        },
+        {
+            "name": "Détection de spam intelligent",
+            "description": "Solution complète de détection de spam avec interface web",
+            "stack": [
+                "Python",
+                "TensorFlow",
+                "React",
+                "FastAPI"
+            ],
+            "category": "all",
+            "icon": "ShieldCheck",
+            "link": "#"
+        }
+    ],
+    "contact": {
+        "email": "hamzabelkadi25@gmail.com",
+        "phone": "+212 679-084-271",
+        "socialLinks": [
+            {
+                "name": "GitHub",
+                "url": "https://github.com/Belkadi-hamza",
+                "icon": "Github"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/belkadi-hamza-81a756292/",
+                "icon": "Linkedin"
+            },
+            {
+                "name": "Email",
+                "url": "mailto:hamzabelkadi25@gmail.com",
+                "icon": "Mail"
+            }
+        ]
+    }
+}
