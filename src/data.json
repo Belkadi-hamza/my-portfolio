@@ -39,33 +39,6 @@
     ],
     "experience": [
         {
-            "title": "Full Stack Developer",
-            "company": "SNRT",
-            "period": "Mai 2024 – Juin 2024",
-            "description": [
-                "Optimisation des performances d'une application média",
-                "Refonte du système de streaming en temps réel"
-            ]
-        },
-        {
-            "title": "Full Stack Developer",
-            "company": "SNRT",
-            "period": "Mai 2024 – Juin 2024",
-            "description": [
-                "Optimisation des performances d'une application média",
-                "Refonte du système de streaming en temps réel"
-            ]
-        },
-        {
-            "title": "Full Stack Developer",
-            "company": "SNRT",
-            "period": "Mai 2024 – Juin 2024",
-            "description": [
-                "Optimisation des performances d'une application média",
-                "Refonte du système de streaming en temps réel"
-            ]
-        },
-        {
             "title": "Ingénieur IA & Machine Learning",
             "company": "FSBM",
             "period": "Mars 2025 – Juin 2025",
@@ -73,6 +46,25 @@
                 "Développement d'un système de recommandation de livres basé sur l'analyse du contenu",
                 "Utilisation d'algorithmes de machine learning pour extraire et comparer les caractéristiques des livres",
                 "Optimisation des performances du moteur de suggestion en fonction de la similarité textuelle et thématique"
+            ]
+        }
+        {
+            "title": "Full Stack Developer",
+            "company": "SNRT",
+            "period": "Mai 2024 – Juin 2024",
+            "description": [
+                "Optimisation des performances d'une application média",
+                "Refonte du système de streaming en temps réel"
+            ]
+        },
+        {
+            "title": "Front End Developer",
+            "company": "Province de Sidi Kacem",
+            "period": "Octobre 2023 – Janvier 2024",
+            "description": [
+                "Développement de l'interface utilisateur du chatbot",
+                "Intégration avec les API backend pour la gestion des réponses",
+                "Optimisation de l'expérience utilisateur et du design interactif"
             ]
         }
     ],
