@@ -167,7 +167,7 @@
             ],
             "category": "web",
             "icon": "BookOpen",
-            "link": "#"
+            "link": "https://bookbound0.netlify.app"
         },
         {
             "name": "Système de gestion de caméras",
@@ -231,7 +231,7 @@
             ],
             "category": "web",
             "icon": "Printer",
-            "link": "#"
+            "link": "https://print-master.netlify.app"
         },
         {
             "name": "PrintCraft Studio",
@@ -243,7 +243,7 @@
             ],
             "category": "web",
             "icon": "Palette",
-            "link": "#"
+            "link": "https://print-craft-studio.netlify.app"
         }
     ],
     "contact": {
