@@ -68,68 +68,60 @@
             ]
         }
     ],
-    "skills": {
-        "categories": [
-            {
-                "title": "Frontend",
-                "icon": "Code",
-                "skills": [
-                    {
-                        "name": "React",
-                        "level": 90
-                    },
-                    {
-                        "name": "Vue.js",
-                        "level": 85
-                    },
-                    {
-                        "name": "TypeScript",
-                        "level": 88
-                    }
-                ]
-            },
-            {
-                "title": "Backend",
-                "icon": "Database",
-                "skills": [
-                    {
-                        "name": "Laravel",
-                        "level": 85
-                    },
-                    {
-                        "name": "Node.js",
-                        "level": 80
-                    },
-                    {
-                        "name": "Python",
-                        "level": 75
-                    },
-                    {
-                        "name": "Spring Boot",
-                        "level": 50
-                    }
-                ]
-            },
-            {
-                "title": "IA/ML",
-                "icon": "Brain",
-                "skills": [
-                    {
-                        "name": "TensorFlow",
-                        "level": 75
-                    },
-                    {
-                        "name": "NLP",
-                        "level": 70
-                    },
-                    {
-                        "name": "Computer Vision",
-                        "level": 68
-                    }
-                ]
-            }
+  "skills": {
+    "categories": [
+      {
+        "title": "Frontend",
+        "icon": "Code",
+        "skills": [
+          { "name": "React", "level": 90 },
+          { "name": "Vue.js", "level": 85 },
+          { "name": "TypeScript", "level": 88 },
+          { "name": "Next.js", "level": 80 },
+          { "name": "Tailwind CSS", "level": 85 },
+          { "name": "HTML5", "level": 95 },
+          { "name": "CSS3", "level": 90 }
         ]
-    },
+      },
+      {
+        "title": "Backend",
+        "icon": "Database",
+        "skills": [
+          { "name": "Laravel", "level": 85 },
+          { "name": "Python", "level": 75 },
+          { "name": "Spring Boot", "level": 50 },
+          { "name": "Django", "level": 70 }
+        ]
+      },
+      {
+        "title": "IA/ML/DL",
+        "icon": "Brain",
+        "skills": [
+          { "name": "TensorFlow", "level": 75 },
+          { "name": "NLP", "level": 70 },
+          { "name": "Computer Vision", "level": 68 },
+          { "name": "Scikit-learn", "level": 80 },
+          { "name": "Pandas", "level": 85 },
+          { "name": "Keras", "level": 70 },
+          { "name": "PyTorch", "level": 65 },
+          { "name": "K-means / K-medoids", "level": 75 },
+          { "name": "DBSCAN / HAC", "level": 70 },
+          { "name": "K-NN", "level": 78 }
+        ]
+      },
+      {
+        "title": "DevOps & Tools",
+        "icon": "Settings",
+        "skills": [
+          { "name": "Docker", "level": 75 },
+          { "name": "Git & GitHub", "level": 90 },
+          { "name": "CI/CD (GitHub Actions, GitLab CI)", "level": 70 },
+          { "name": "Linux", "level": 80 },
+          { "name": "Nginx", "level": 65 }
+        ]
+      }
+    ]
+  },
     "projects": [
         {
             "name": "InfoBot",
@@ -219,7 +211,7 @@
                 "React",
                 "FastAPI"
             ],
-            "category": "all",
+            "category": "ai",
             "icon": "ShieldCheck",
             "link": "#"
         },

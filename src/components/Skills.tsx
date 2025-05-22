@@ -1,4 +1,4 @@
-import { Brain, Code, Database, GitBranch, Users } from 'lucide-react';
+import { Brain, Code, Database, GitBranch, Users, Settings } from 'lucide-react';
 import data from '../data.json';
 import { SkillCategory } from '../types';
 
@@ -7,7 +7,8 @@ const iconMap = {
   Brain,
   Database,
   GitBranch,
-  Users
+  Users,
+  Settings
 } as const;
 
 export default function Skills() {
