@@ -6,6 +6,7 @@
 @layer base {
   body {
     @apply antialiased transition-colors duration-200;
+    perspective: 1000px;
   }
 
   /* Focus styles */
@@ -29,4 +30,23 @@
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-gray-400 dark:bg-gray-500;
   }
+}
+
+/* 3D Transforms */
+.card-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.card-3d:hover {
+  transform: translateZ(20px) rotateX(5deg);
+}
+
+.section-3d {
+  transform-style: preserve-3d;
+  perspective: 2000px;
+}
+
+.text-3d {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }

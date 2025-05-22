@@ -1,12 +1,12 @@
 import { Github, Linkedin, Mail } from 'lucide-react';
 import data from '../data.json';
 import { HeroData } from '../types';
+import ComputerScene from './ComputerScene';
 
 const iconComponents = {
   Github,
   Linkedin,
   Mail
-  // Ajoutez d'autres icônes au besoin
 };
 
 export default function Hero() {
@@ -14,7 +14,6 @@ export default function Hero() {
 
   return (
     <section className="min-h-screen flex items-center relative overflow-hidden">
-      {/* ... */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
@@ -45,11 +44,7 @@ export default function Hero() {
             </div>
           </div>
           <div className="hidden md:block">
-            <img
-              src={heroData.image}
-              alt="Programming workspace"
-              className="rounded-lg shadow-2xl"
-            />
+            <ComputerScene />
           </div>
         </div>
       </div>

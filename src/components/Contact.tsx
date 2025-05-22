@@ -1,6 +1,17 @@
 import { Mail, Phone, Github, Linkedin } from 'lucide-react';
+import data from '../data.json';
+import { ContactData } from '../types';
+
+const iconMap = {
+  Github,
+  Linkedin,
+  Mail,
+  Phone
+};
 
 export default function Contact() {
+  const { email, phone, socialLinks }: ContactData = data.contact;
+
   return (
     <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -11,55 +22,37 @@ export default function Contact() {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Contact Information */}
           <div className="space-y-6">
             <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg transform transition-all duration-300 hover:scale-105">
               <h3 className="text-xl font-semibold mb-4">Coordonnées</h3>
-              
               <div className="space-y-4">
-                <a
-                  href="mailto:hamzabelkadi25@gmail.com"
-                  className="flex items-center text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400"
-                >
+                <a href={`mailto:${email}`} className="flex items-center text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400">
                   <Mail className="w-5 h-5 mr-3" />
-                  hamzabelkadi25@gmail.com
+                  {email}
                 </a>
-                
-                <a
-                  href="tel:212679084271"
-                  className="flex items-center text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400"
-                >
+                <a href={`tel:${phone}`} className="flex items-center text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400">
                   <Phone className="w-5 h-5 mr-3" />
-                  212 679-084-271
+                  {phone}
                 </a>
               </div>
             </div>
 
             <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg transform transition-all duration-300 hover:scale-105">
               <h3 className="text-xl font-semibold mb-4">Réseaux Sociaux</h3>
-              
               <div className="flex space-x-4">
-                <a
-                  href="https://github.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-purple-100 dark:hover:bg-purple-900 transition-colors"
-                >
-                  <Github className="w-6 h-6" />
-                </a>
+                {socialLinks.map((link, index) => {
+                  const Icon = iconMap[link.icon as keyof typeof iconMap];
+                  return (
+                    <a key={index} href={link.url} target="_blank" rel="noopener noreferrer"
+                      className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-purple-100 dark:hover:bg-purple-900 transition-colors">
+                      <Icon className="w-6 h-6" />
+                    </a>
+                  );
+                })}
                 
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-purple-100 dark:hover:bg-purple-900 transition-colors"
-                >
-                  <Linkedin className="w-6 h-6" />
-                </a>
               </div>
             </div>
           </div>
-
           {/* Contact Form */}
           <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg">
             <form className="space-y-6">
