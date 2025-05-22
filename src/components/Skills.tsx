@@ -1,4 +1,5 @@
 import { Brain, Code, Database, GitBranch, Users, Settings } from 'lucide-react';
+import { motion } from 'framer-motion';
 import data from '../data.json';
 import { SkillCategory } from '../types';
 
@@ -52,10 +53,13 @@ export default function Skills() {
                         </span>
                       </div>
                       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
-                        <div
-                          className="bg-gradient-to-r from-purple-600 to-blue-500 h-2 rounded-full transition-all duration-1000 ease-out"
-                          style={{ width: `${skill.level}%`, transform: 'translateZ(2px)' }}
-                        />
+                        <motion.div
+  className="bg-gradient-to-r from-purple-600 to-blue-500 h-2 rounded-full"
+  initial={{ width: 0 }}
+  animate={{ width: `${skill.level}%` }}
+  transition={{ duration: 1.2, ease: 'easeOut' }}
+/>
+
                       </div>
                     </div>
                   ))}
