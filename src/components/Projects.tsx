@@ -11,8 +11,7 @@ import {
   Palette
 } from 'lucide-react';
 import { useState } from 'react';
-import data from '../data.json';
-import { Project } from '../types';
+import { usePortfolioData } from '../hooks/usePortfolioData';
 
 const iconMap = {
   Bot,
@@ -29,7 +28,29 @@ const iconMap = {
 
 export default function Projects() {
   const [filter, setFilter] = useState<'all' | 'web' | 'ai'>('all');
-  const projects = data.projects as Project[];
+  const { data, loading, error } = usePortfolioData();
+
+  if (loading) {
+    return (
+      <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mx-auto"></div>
+        </div>
+      </section>
+    );
+  }
+
+  if (error || !data) {
+    return (
+      <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-red-600">Failed to load projects data</p>
+        </div>
+      </section>
+    );
+  }
+
+  const projects = data.projects;
 
   const filteredProjects = projects.filter(project => 
     filter === 'all' || project.category === filter

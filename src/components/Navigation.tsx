@@ -8,6 +8,7 @@ const navItems = [
   { name: 'Experience', href: '#experience' },
   { name: 'Projects', href: '#projects' },
   { name: 'Contact', href: '#contact' },
+  { name: 'admin', href:'/admin'}
 ];
 
 export default function Navigation() {

@@ -1,6 +1,5 @@
 import { Github, Linkedin, Mail } from 'lucide-react';
-import data from '../data.json';
-import { HeroData } from '../types';
+import { usePortfolioData } from '../hooks/usePortfolioData';
 import ComputerScene from './ComputerScene';
 
 const iconComponents = {
@@ -10,7 +9,28 @@ const iconComponents = {
 };
 
 export default function Hero() {
-  const heroData: HeroData = data.hero;
+  const { data, loading, error } = usePortfolioData();
+
+  if (loading) {
+    return (
+      <section className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-600"></div>
+      </section>
+    );
+  }
+
+  if (error || !data) {
+    return (
+      <section className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <p className="text-red-600 mb-4">{error || 'Failed to load data'}</p>
+          <p className="text-gray-600">Please try refreshing the page</p>
+        </div>
+      </section>
+    );
+  }
+
+  const heroData = data.hero;
 
   return (
     <section className="min-h-screen flex items-center relative overflow-hidden">

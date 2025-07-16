@@ -1,10 +1,30 @@
 import { Briefcase } from 'lucide-react';
-import data from '../data.json';
-import { Experience } from '../types';
+import { usePortfolioData } from '../hooks/usePortfolioData';
 
 export default function ExperienceComponent() {
-  const experiences: Experience[] = data.experience;
+  const { data, loading, error } = usePortfolioData();
 
+  if (loading) {
+    return (
+      <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mx-auto"></div>
+        </div>
+      </section>
+    );
+  }
+
+  if (error || !data) {
+    return (
+      <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-red-600">Failed to load experience data</p>
+        </div>
+      </section>
+    );
+  }
+
+  const experiences = data.experience;
 
   return (
     <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-800">
