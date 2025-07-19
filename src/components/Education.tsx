@@ -1,30 +1,21 @@
 import { GraduationCap } from 'lucide-react';
-import { usePortfolioData } from '../hooks/usePortfolioData';
+import { Education } from '../types';
 
-export default function EducationComponent() {
-  const { data, loading, error } = usePortfolioData();
+interface EducationProps {
+  educationData: Education[] | null;
+}
 
-  if (loading) {
+export default function EducationComponent({ educationData }: EducationProps) {
+  if (!educationData) {
     return (
       <section id="education" className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mx-auto"></div>
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-purple-600 mx-auto"></div>
+          <p className="mt-4 text-gray-600 dark:text-gray-400">Loading education data...</p>
         </div>
       </section>
     );
   }
-
-  if (error || !data) {
-    return (
-      <section id="education" className="py-20 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-red-600">Failed to load education data</p>
-        </div>
-      </section>
-    );
-  }
-
-  const educationData = data.education;
 
   return (
     <section id="education" className="py-20 bg-gray-50 dark:bg-gray-800">

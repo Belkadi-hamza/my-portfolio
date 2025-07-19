@@ -1,7 +1,7 @@
 export interface SocialLink {
     name: string;
     url: string;
-    icon: string;
+    icon: 'Github' | 'Linkedin' | 'Mail';
 }
 
 export interface HeroData {
@@ -26,7 +26,7 @@ export interface Skill {
 
 export interface SkillCategory {
     title: string;
-    icon: 'Code' | 'Brain' | 'Database' | 'GitBranch' | 'Users';
+    icon: 'Code' | 'Brain' | 'Database' | 'GitBranch' | 'Users' | 'Settings';
     skills: Skill[];
 }
 
@@ -42,7 +42,7 @@ export interface Project {
     description: string;
     stack: string[];
     category: 'web' | 'ai' | 'all';
-    icon: 'Code' | 'Book' | 'Video' | 'Camera' | 'Brain' | 'ShieldCheck';
+    icon: 'Code' | 'Book' | 'Video' | 'Camera' | 'Brain' | 'ShieldCheck' | 'Bot' | 'LibraryBig' | 'BookOpen' | 'Printer' | 'Palette';
     link?: string;
 }
 

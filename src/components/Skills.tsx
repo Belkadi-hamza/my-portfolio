@@ -1,6 +1,6 @@
 import { Brain, Code, Database, GitBranch, Users, Settings } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { usePortfolioData } from '../hooks/usePortfolioData';
+import { SkillCategory } from '../types';
 
 const iconMap = {
   Code,
@@ -11,30 +11,21 @@ const iconMap = {
   Settings
 } as const;
 
-export default function Skills() {
-  const { data, loading, error } = usePortfolioData();
+interface SkillsProps {
+  skillCategories: SkillCategory[] | null;
+}
 
-  if (loading) {
+export default function Skills({ skillCategories }: SkillsProps) {
+  if (!skillCategories) {
     return (
       <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mx-auto"></div>
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-purple-600 mx-auto"></div>
+          <p className="mt-4 text-gray-600 dark:text-gray-400">Loading skills data...</p>
         </div>
       </section>
     );
   }
-
-  if (error || !data) {
-    return (
-      <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-red-600">Failed to load skills data</p>
-        </div>
-      </section>
-    );
-  }
-
-  const skillCategories = data.skills.categories;
 
   return (
     <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-800 section-3d">

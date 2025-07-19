@@ -1,7 +1,5 @@
-import { initializeApp } from 'firebase/app';
+import { initializeApp, getApps } from 'firebase/app';
 import { getDatabase } from 'firebase/database';
-import { getAuth } from 'firebase/auth';
-import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBdnv1qCfpDFAKCr00h4V-sIs_pagfmMdI",
@@ -10,11 +8,13 @@ const firebaseConfig = {
   projectId: "deep-ground-465915-u8",
   storageBucket: "deep-ground-465915-u8.firebasestorage.app",
   messagingSenderId: "164078181370",
-  appId: "1:164078181370:web:f21c0980cbe49bd22b2243",
+  appId: "1:164078181370:web:d8608ba9c9462a012b2243",
+  measurementId: "G-2JP9XTYTZJ"
 };
 
-const app = initializeApp(firebaseConfig);
-export const database = getDatabase(app);
-export const auth = getAuth(app);
-export const storage = getStorage(app);
-export default app;
+// Initialize Firebase only if no apps exist (prevents duplicate app error in development)
+const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
+const database = getDatabase(app);
+
+export { database };
+export const userId = "OgyHE2316metkHnjAsjmiiUx4Ck1";

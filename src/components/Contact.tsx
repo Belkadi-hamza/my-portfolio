@@ -1,37 +1,30 @@
 import { Mail, Phone, Github, Linkedin } from 'lucide-react';
-import { usePortfolioData } from '../hooks/usePortfolioData';
+import { ContactData } from '../types';
 
 const iconMap = {
-  Github,
-  Linkedin,
-  Mail,
-  Phone
+  Github: Github,
+  Linkedin: Linkedin,
+  Mail: Mail,
+  Phone: Phone
 };
 
-export default function Contact() {
-  const { data, loading, error } = usePortfolioData();
+interface ContactProps {
+  contactData: ContactData | null;
+}
 
-  if (loading) {
+export default function Contact({ contactData }: ContactProps) {
+  if (!contactData) {
     return (
       <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mx-auto"></div>
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-purple-600 mx-auto"></div>
+          <p className="mt-4 text-gray-600 dark:text-gray-400">Loading contact data...</p>
         </div>
       </section>
     );
   }
 
-  if (error || !data) {
-    return (
-      <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-red-600">Failed to load contact data</p>
-        </div>
-      </section>
-    );
-  }
-
-  const { email, phone, socialLinks } = data.contact;
+  const { email, phone, socialLinks } = contactData;
 
   return (
     <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-800">
@@ -62,7 +55,7 @@ export default function Contact() {
               <h3 className="text-xl font-semibold mb-4">Réseaux Sociaux</h3>
               <div className="flex space-x-4">
                 {socialLinks.map((link, index) => {
-                  const Icon = iconMap[link.icon as keyof typeof iconMap];
+                  const Icon = iconMap[link.icon as keyof typeof iconMap] || Mail;
                   return (
                     <a key={index} href={link.url} target="_blank" rel="noopener noreferrer"
                       className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-purple-100 dark:hover:bg-purple-900 transition-colors">

@@ -1,36 +1,28 @@
 import { Github, Linkedin, Mail } from 'lucide-react';
-import { usePortfolioData } from '../hooks/usePortfolioData';
+import { HeroData } from '../types';
 import ComputerScene from './ComputerScene';
 
 const iconComponents = {
-  Github,
-  Linkedin,
-  Mail
+  Github: Github,
+  Linkedin: Linkedin,
+  Mail: Mail
 };
 
-export default function Hero() {
-  const { data, loading, error } = usePortfolioData();
+interface HeroProps {
+  heroData: HeroData | null;
+}
 
-  if (loading) {
-    return (
-      <section className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-600"></div>
-      </section>
-    );
-  }
-
-  if (error || !data) {
+export default function Hero({ heroData }: HeroProps) {
+  if (!heroData) {
     return (
       <section className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <p className="text-red-600 mb-4">{error || 'Failed to load data'}</p>
-          <p className="text-gray-600">Please try refreshing the page</p>
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-600 mx-auto"></div>
+          <p className="mt-4 text-gray-600 dark:text-gray-400">Loading...</p>
         </div>
       </section>
     );
   }
-
-  const heroData = data.hero;
 
   return (
     <section className="min-h-screen flex items-center relative overflow-hidden">
@@ -48,7 +40,7 @@ export default function Hero() {
             </p>
             <div className="flex space-x-4">
               {heroData.socialLinks.map((link, index) => {
-                const IconComponent = iconComponents[link.icon as keyof typeof iconComponents];
+                const IconComponent = iconComponents[link.icon as keyof typeof iconComponents] || Mail;
                 return (
                   <a
                     key={index}
